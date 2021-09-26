@@ -10,8 +10,8 @@ block_image_height = 5;
 function load_img(){
 	fabric.Image.fromURL("hole.png" , function (Img){
         hole_obj=Img;
-        hole_obj.scaleToWidth(75);
-        hole_obj.scaleToHeight(75);
+        hole_obj.scaleToWidth(45);
+        hole_obj.scaleToHeight(45);
         hole_obj.set({
             top:hole_y,
             left:hole_x
@@ -25,8 +25,8 @@ function new_image()
 {
 	fabric.Image.fromURL("ball.png" , function (Img){
         ball_obj=Img;
-        ball_obj.scaleToWidth(50);
-        ball_obj.scaleToHeight(50);
+        ball_obj.scaleToWidth(40);
+        ball_obj.scaleToHeight(40);
         ball_obj.set({
             top:ball_y,
             left:ball_x
@@ -41,7 +41,7 @@ function my_keydown(e)
 {
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
-	if ((ball_x==hole_x) && (ball_y==hole_y)) {
+	if ((ball_x==805) && (ball_y==400)) {
 		canvas.remove(ball_obj);
 		document.getElementById("hd3").innerHTML="You have Hit the Goal";
 		document.getElementById("myCanvas").style.borderColor="red";
